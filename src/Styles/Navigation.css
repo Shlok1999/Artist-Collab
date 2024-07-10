@@ -1,0 +1,21 @@
+.navigation{
+    background-image: linear-gradient(to right, rgb(167, 20, 143), blue);
+}
+.nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.nav-container li{
+    list-style: none;
+    color: white;
+    font-weight: lighter;
+    cursor: pointer;
+
+}
+.get-started{
+    padding: 5px;
+    border-radius: 3px;
+    background-color: rgb(227, 14, 14);
+    font-weight: bold;
+}

@@ -1,0 +1,15 @@
+.header-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.header-text{
+    max-width: 60%;
+}
+.code-collab-head{
+    font-size: 60px;
+}
+.code-collab-subhead{
+    font-size: 37px;
+    color: rgb(173, 17, 173);
+}
