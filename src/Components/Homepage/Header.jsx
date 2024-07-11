@@ -1,5 +1,11 @@
 import '../../Styles/Header.css'
+import { account } from '../../Appwrite/config'
+import { useEffect } from 'react'
+
 function Header() {
+  useEffect(()=>{
+    console.log(account)
+  },[])
   return (
     <div className='header-section'>
         <div className="header-text">
