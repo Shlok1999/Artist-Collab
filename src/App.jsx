@@ -21,7 +21,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route element={<PrivateRoutes/>}>
             <Route path='/room' element={<Room />} />
-            <Route path='/document' element={<Document />} />
+            <Route path='/document/:roomId' element={<Document />} />
           </Route>
         </Routes>
         </AuthProvider>

@@ -1,7 +1,6 @@
-import { React, useContext, useState, useEffect, createContext, useRef } from 'react'
+import { useContext, useState, useEffect, createContext, useRef } from 'react'
 import { account } from '../../Appwrite/config';
 import { ID } from 'appwrite';
-import { useNavigate } from 'react-router-dom';
 import LoadingBar from 'react-top-loading-bar';
 const AuthContext = createContext();
 
@@ -9,7 +8,6 @@ export const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const [user, setUser] = useState(null);
     const ref = useRef(null);
-    const navigate = useNavigate();
 
 
     useEffect(() => {
@@ -40,7 +38,7 @@ export const AuthProvider = ({ children }) => {
     const registerUser = async(userInfo) => {
         setLoading(true);
         try{
-            let response = await account.create(
+            await account.create(
                 ID.unique(),
                 userInfo.email,
                 userInfo.password,

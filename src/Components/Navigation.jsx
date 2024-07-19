@@ -13,10 +13,9 @@ function Navigation() {
         <ul className="nav-container">
             <li><h3>LOGO</h3></li>
             {
-              user?<li onClick={logoutUser}>Logout</li>:
+              user? <> <li onClick={logoutUser}>Logout</li><li>{user.name}</li></>:
               <li><a href="/login">Login</a></li>
             }
-            
             <li>Products</li>
             <li>About</li>
             <li onClick={()=>window.location.href="/room"} className='get-started'>Get Started</li>
